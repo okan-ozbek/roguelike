@@ -1,0 +1,712 @@
+fileFormatVersion: 2
+guid: 128efdfd65e1a20409944cf6519df4fb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4864024465556775891
+    second: soothing-owl-logo_0
+  - first:
+      213: -4490292090138762630
+    second: soothing-owl-logo_1
+  - first:
+      213: -6841497773860586704
+    second: soothing-owl-logo_2
+  - first:
+      213: -7599314845536539790
+    second: soothing-owl-logo_3
+  - first:
+      213: -2562125004295746559
+    second: soothing-owl-logo_4
+  - first:
+      213: -3451432821459192077
+    second: soothing-owl-logo_5
+  - first:
+      213: -4122777398473340682
+    second: soothing-owl-logo_6
+  - first:
+      213: 6583630606672931367
+    second: soothing-owl-logo_7
+  - first:
+      213: 486343972399029512
+    second: soothing-owl-logo_8
+  - first:
+      213: -1658625787872179135
+    second: soothing-owl-logo_9
+  - first:
+      213: -8051081035635429463
+    second: soothing-owl-logo_10
+  - first:
+      213: 8496278862304360299
+    second: soothing-owl-logo_11
+  - first:
+      213: -8747224576235112621
+    second: soothing-owl-logo_12
+  - first:
+      213: 8811837301101946324
+    second: soothing-owl-logo_13
+  - first:
+      213: 8395168352089978510
+    second: soothing-owl-logo_14
+  - first:
+      213: 3543001724977479464
+    second: soothing-owl-logo_15
+  - first:
+      213: -4840875439830800479
+    second: soothing-owl-logo_16
+  - first:
+      213: 4863125304526616519
+    second: soothing-owl-logo_17
+  - first:
+      213: 1316774601203780122
+    second: soothing-owl-logo_18
+  - first:
+      213: -3466602693875166917
+    second: soothing-owl-logo_19
+  - first:
+      213: -7526603327465725504
+    second: soothing-owl-logo_20
+  - first:
+      213: 2199479319727427727
+    second: soothing-owl-logo_21
+  - first:
+      213: 5359196678585527699
+    second: soothing-owl-logo_22
+  - first:
+      213: -2228597656413237787
+    second: soothing-owl-logo_23
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: soothing-owl-logo_0
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 538
+        width: 39
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2cddafe4838f7cb0800000000000000
+      internalID: -4864024465556775891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_1
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 538
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72688572274fa1c0800000000000000
+      internalID: -4490292090138762630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_2
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 538
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03bf961c50e1e01a0800000000000000
+      internalID: -6841497773860586704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_3
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 539
+        width: 54
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b217f296fc98690800000000000000
+      internalID: -7599314845536539790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_4
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 539
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c4ec022e0817cd0800000000000000
+      internalID: -2562125004295746559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_5
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 539
+        width: 12
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f6fcc6a22c0a10d0800000000000000
+      internalID: -3451432821459192077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_6
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 539
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8ccfbacc3f8c6c0800000000000000
+      internalID: -4122777398473340682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_7
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 538
+        width: 51
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a212bb721cd5b50800000000000000
+      internalID: 6583630606672931367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_8
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 538
+        width: 59
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d1f712447dfb600800000000000000
+      internalID: 486343972399029512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_9
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 539
+        width: 73
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c839a32a06bf8e0800000000000000
+      internalID: -1658625787872179135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_10
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 539
+        width: 39
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9afe01d5470d44090800000000000000
+      internalID: -8051081035635429463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_11
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 456
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b67bf4c2c98d8e570800000000000000
+      internalID: 8496278862304360299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_12
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 456
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35770fab79d9b9680800000000000000
+      internalID: -8747224576235112621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_13
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 456
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d5e7b6965fe94a70800000000000000
+      internalID: 8811837301101946324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_14
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 456
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86bceff221a18470800000000000000
+      internalID: 8395168352089978510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_15
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 456
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82ff0e71c454b2130800000000000000
+      internalID: 3543001724977479464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_16
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 456
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7e8fe7f61c1dcb0800000000000000
+      internalID: -4840875439830800479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_17
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 456
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7b582d2ba4d7340800000000000000
+      internalID: 4863125304526616519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_18
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 456
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a0202f58f164210800000000000000
+      internalID: 1316774601203780122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_19
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 456
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b31982e773724efc0800000000000000
+      internalID: -3466602693875166917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_20
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 456
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c1e12db6222c8790800000000000000
+      internalID: -7526603327465725504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_21
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 456
+        width: 20
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f80db27b9ce168e10800000000000000
+      internalID: 2199479319727427727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_22
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 456
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d2b842cf0bf5a40800000000000000
+      internalID: 5359196678585527699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soothing-owl-logo_23
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 456
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed88363d3e6211e0800000000000000
+      internalID: -2228597656413237787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      soothing-owl-logo_0: -4864024465556775891
+      soothing-owl-logo_1: -4490292090138762630
+      soothing-owl-logo_10: -8051081035635429463
+      soothing-owl-logo_11: 8496278862304360299
+      soothing-owl-logo_12: -8747224576235112621
+      soothing-owl-logo_13: 8811837301101946324
+      soothing-owl-logo_14: 8395168352089978510
+      soothing-owl-logo_15: 3543001724977479464
+      soothing-owl-logo_16: -4840875439830800479
+      soothing-owl-logo_17: 4863125304526616519
+      soothing-owl-logo_18: 1316774601203780122
+      soothing-owl-logo_19: -3466602693875166917
+      soothing-owl-logo_2: -6841497773860586704
+      soothing-owl-logo_20: -7526603327465725504
+      soothing-owl-logo_21: 2199479319727427727
+      soothing-owl-logo_22: 5359196678585527699
+      soothing-owl-logo_23: -2228597656413237787
+      soothing-owl-logo_3: -7599314845536539790
+      soothing-owl-logo_4: -2562125004295746559
+      soothing-owl-logo_5: -3451432821459192077
+      soothing-owl-logo_6: -4122777398473340682
+      soothing-owl-logo_7: 6583630606672931367
+      soothing-owl-logo_8: 486343972399029512
+      soothing-owl-logo_9: -1658625787872179135
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
