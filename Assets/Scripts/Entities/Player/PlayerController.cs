@@ -46,11 +46,13 @@ namespace Entities.Player
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                print("Triggered death");
                 Dead?.Invoke();
             }
 
             if (Input.GetKeyDown(KeyCode.R))
             {
+                print("Triggered win");
                 Win?.Invoke();
             }
         }
