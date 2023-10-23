@@ -12,12 +12,13 @@ namespace Entities.Player
         public static event Default Dead;
         public static event Default Win;
 
-        public float accelerationSpeed;
-        public float decelerationSpeed;
-        public Vector2 maxSpeed;
-
+        public float acceleration;
+        public float deceleration;
+        public float maxSpeed;
+        
+        private Vector2 _input;
         private Vector2 _lastInput;
-        private Vector3 _velocity;
+        private Vector2 _velocity;
 
         private Rigidbody2D _rigidbody;
         private BoxCollider2D _boxCollider;
@@ -29,6 +30,8 @@ namespace Entities.Player
         
         private void Update()
         {
+            _input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+            
             DEBUG_PLAYER_EVENTS();
         }
 
@@ -39,40 +42,51 @@ namespace Entities.Player
 
         private void Movement()
         {
-            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            Accelerate();
+            Decelerate();
+        }
 
-            if (Mathf.Abs(input.x) > 0.0f)
+        private void Accelerate()
+        {
+            if (_input == Vector2.zero)
             {
-                _velocity.x += accelerationSpeed;
-                _velocity.x = Mathf.Clamp(_velocity.x, 0.0f, maxSpeed.x);
+                return;
+            }
+            
+            SuddenMovementChange();
+                
+            _velocity += Vector2.one * acceleration * Time.deltaTime;
+            _velocity = new Vector2(
+                Mathf.Clamp(_velocity.x, 0.0f, maxSpeed), 
+                Mathf.Clamp(_velocity.y, 0.0f, maxSpeed)
+            );
+                
+            _lastInput = _input;
+                
+            _rigidbody.velocity = _velocity * _input;
+        }
 
-                _rigidbody.velocity = new Vector2(_velocity.x * input.x, _rigidbody.velocity.y);
-                _lastInput.x = Mathf.Sign(input.x);
+        private void Decelerate()
+        {
+            if (_input != Vector2.zero)
+            {
+                return;
             }
 
-            if (Mathf.Abs(input.y) > 0.0f)
+            _velocity -= Vector2.one * deceleration * Time.deltaTime;
+            _velocity = new Vector2(
+                Mathf.Clamp(_velocity.x, 0.0f, maxSpeed), 
+                Mathf.Clamp(_velocity.y, 0.0f, maxSpeed)
+            );
+
+            _rigidbody.velocity = _velocity * _lastInput;
+        }
+
+        private void SuddenMovementChange()
+        {
+            if (_input != _lastInput)
             {
-                _velocity.y += accelerationSpeed;
-                _velocity.y = Mathf.Clamp(_velocity.y, 0.0f, maxSpeed.y);
-
-                _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _velocity.y * input.y);
-                _lastInput.y = Mathf.Sign(input.y);
-            }
-
-            if (Mathf.Abs(input.x) == 0.0f)
-            {
-                _velocity.x -= accelerationSpeed;
-                _velocity.x = Mathf.Clamp(_velocity.x, 0.0f, maxSpeed.x);
-
-                _rigidbody.velocity = new Vector2(_velocity.x * _lastInput.x, _rigidbody.velocity.y);
-            }
-
-            if (Mathf.Abs(input.y) == 0.0f)
-            {
-                _velocity.y -= accelerationSpeed;
-                _velocity.y = Mathf.Clamp(_velocity.y, 0.0f, maxSpeed.y);
-
-                _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _velocity.y * _lastInput.y);
+                _velocity *= 0.8f;
             }
         }
 
