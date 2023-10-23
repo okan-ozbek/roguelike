@@ -2,13 +2,13 @@ using System;
 using System.ComponentModel;
 using Entities.Player;
 using Enums;
+using Exceptions;
 using Generics;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Scenes
 {
-    public class SceneController : SingletonMonoBehaviour<SceneController>
+    public class StaticSceneManager : SingletonMonoBehaviour<StaticSceneManager>
     {
         private void OnEnable()
         {
@@ -26,10 +26,20 @@ namespace Scenes
         {
             if (!Enum.IsDefined(typeof(SceneNameEnum), sceneName))
             {
-                throw new InvalidEnumArgumentException(nameof(sceneName), (int)sceneName, typeof(SceneNameEnum));
+                throw new SceneNameNotFoundException();
             }
 
             SceneManager.LoadScene(sceneName.ToString());
+        }
+        
+        public void OpenScene(string sceneName)
+        {
+            if (!Enum.IsDefined(typeof(SceneNameEnum), sceneName))
+            {
+                throw new SceneNameNotFoundException();
+            }
+
+            SceneManager.LoadScene(sceneName);
         }
 
         private void EndScene()
