@@ -8,24 +8,23 @@ namespace Entities.Player
     [RequireComponent(typeof(BoxCollider2D))]
     public sealed class PlayerContext : MonoBehaviour
     {
+        #region Debugging delete this eventually
         public delegate void Default();
         public static event Default Dead;
         public static event Default Win;
+        #endregion
         
         public PlayerInput PlayerInput;
-
-        private Rigidbody2D _rigidbody;
-
         public PlayerBaseState State;
         public PlayerStateFactory Factory;
+        
+        private Rigidbody2D _rigidbody;
 
         private void Start()
         {
             Factory = new PlayerStateFactory(this);
             State = Factory.Idle();
-            
-            print(State.GetType());
-            
+
             PlayerInput = new PlayerInput();
             
             _rigidbody = GetComponent<Rigidbody2D>();

@@ -23,10 +23,7 @@ namespace Entities.Player.States
 
         protected override void OnFixedUpdate()
         {
-            Debug.Log(_velocity);
-            
-            Accelerate();
-            Decelerate();
+            SetVelocity();
         }
 
         protected override void UpdateState()
@@ -37,38 +34,31 @@ namespace Entities.Player.States
             }
         }
 
-        private void Accelerate()
+        private void SetVelocity()
         {
-            if (Context.PlayerInput.InputDirection == Vector2.zero)
-            {
-                return;
-            }
-            
+            Vector2 newVelocity = (Context.PlayerInput.InputDirection != Vector2.zero)
+                ? Accelerate()
+                : Decelerate();
+
+            Context.SetVelocity(newVelocity);
+        }
+
+        private Vector2 Accelerate()
+        {
             SuddenMovementChange();
                 
             _velocity += Vector2.one * Acceleration * Time.deltaTime;
-            _velocity = new Vector2(
-                Mathf.Clamp(_velocity.x, 0.0f, MaxSpeed), 
-                Mathf.Clamp(_velocity.y, 0.0f, MaxSpeed)
-            );
+            ClampVelocity();
 
-            Context.SetVelocity(_velocity * Context.PlayerInput.InputDirection);
+            return _velocity * Context.PlayerInput.InputDirection;
         }
 
-        private void Decelerate()
+        private Vector2 Decelerate()
         {
-            if (Context.PlayerInput.InputDirection != Vector2.zero)
-            {
-                return;
-            }
-
             _velocity -= Vector2.one * Deceleration * Time.deltaTime;
-            _velocity = new Vector2(
-                Mathf.Clamp(_velocity.x, 0.0f, MaxSpeed), 
-                Mathf.Clamp(_velocity.y, 0.0f, MaxSpeed)
-            );
+            ClampVelocity();
 
-            Context.SetVelocity(_velocity * Context.PlayerInput.LastInputDirection);
+            return _velocity * Context.PlayerInput.LastInputDirection;
         }
 
         private void SuddenMovementChange()
@@ -77,6 +67,14 @@ namespace Entities.Player.States
             {
                 _velocity *= 0.8f;
             }
+        }
+
+        private void ClampVelocity()
+        {
+            _velocity = new Vector2(
+                Mathf.Clamp(_velocity.x, 0.0f, MaxSpeed), 
+                Mathf.Clamp(_velocity.y, 0.0f, MaxSpeed)
+            );
         }
     }
 }
