@@ -2,7 +2,7 @@
 
 namespace Entities.Player
 {
-    public class PlayerInput
+    public sealed class PlayerInput
     {
         public Vector2 InputDirection { get; private set; } 
         public Vector2 LastInputDirection { get; private set; }

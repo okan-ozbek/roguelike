@@ -1,4 +1,4 @@
-﻿namespace Enums
+﻿namespace Scenes.Enums
 {
     public enum SceneNameEnum
     {

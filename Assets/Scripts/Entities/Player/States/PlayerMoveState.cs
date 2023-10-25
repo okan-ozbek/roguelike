@@ -1,31 +1,45 @@
-﻿using UnityEngine;
+﻿using Entities.Player.Factories;
+using Unity.VisualScripting.FullSerializer;
+using UnityEngine;
 
-namespace Entities.Player
+namespace Entities.Player.States
 {
-    public class PlayerMovement
+    public sealed class PlayerMoveState : PlayerBaseState
     {
+        public PlayerMoveState(PlayerContext context, PlayerStateFactory factory) : base(context, factory)
+        {
+        }
+
         private const float Acceleration = 18.0f;
         private const float Deceleration = 25.0f;
         private const float MaxSpeed = 7.0f;
-
+        
         private Vector2 _velocity;
-
-        private readonly PlayerController _controller;
         
-        public PlayerMovement(PlayerController controller)
+        protected override void OnStart()
         {
-            _controller = controller;
+            // Set animation to move animation
         }
-        
-        public void FixedUpdate()
+
+        protected override void OnFixedUpdate()
         {
+            Debug.Log(_velocity);
+            
             Accelerate();
             Decelerate();
         }
 
+        protected override void UpdateState()
+        {
+            if (Context.PlayerInput.InputDirection == Vector2.zero && _velocity == Vector2.zero)
+            {
+                SwitchState(Factory.Idle());
+            }
+        }
+
         private void Accelerate()
         {
-            if (_controller.PlayerInput.InputDirection == Vector2.zero)
+            if (Context.PlayerInput.InputDirection == Vector2.zero)
             {
                 return;
             }
@@ -38,12 +52,12 @@ namespace Entities.Player
                 Mathf.Clamp(_velocity.y, 0.0f, MaxSpeed)
             );
 
-            _controller.SetVelocity(_velocity * _controller.PlayerInput.InputDirection);
+            Context.SetVelocity(_velocity * Context.PlayerInput.InputDirection);
         }
 
         private void Decelerate()
         {
-            if (_controller.PlayerInput.InputDirection != Vector2.zero)
+            if (Context.PlayerInput.InputDirection != Vector2.zero)
             {
                 return;
             }
@@ -54,12 +68,12 @@ namespace Entities.Player
                 Mathf.Clamp(_velocity.y, 0.0f, MaxSpeed)
             );
 
-            _controller.SetVelocity(_velocity * _controller.PlayerInput.LastInputDirection);
+            Context.SetVelocity(_velocity * Context.PlayerInput.LastInputDirection);
         }
 
         private void SuddenMovementChange()
         {
-            if (_controller.PlayerInput.InputDirection != _controller.PlayerInput.LastInputDirection)
+            if (Context.PlayerInput.InputDirection != Context.PlayerInput.LastInputDirection)
             {
                 _velocity *= 0.8f;
             }

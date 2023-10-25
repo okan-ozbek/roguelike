@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Menus
 {
-    public class MenuManager : MonoBehaviour
+    public sealed class MenuManager : MonoBehaviour
     {
         public void ButtonClick(string sceneName)
         {

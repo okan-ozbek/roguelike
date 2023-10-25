@@ -1,25 +1,32 @@
-﻿using System;
+﻿using Entities.Player.Factories;
+using Entities.Player.States;
 using UnityEngine;
 
 namespace Entities.Player
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(BoxCollider2D))]
-    public class PlayerController : MonoBehaviour
+    public sealed class PlayerContext : MonoBehaviour
     {
         public delegate void Default();
         public static event Default Dead;
         public static event Default Win;
         
         public PlayerInput PlayerInput;
-        public PlayerMovement PlayerMovement;
 
         private Rigidbody2D _rigidbody;
 
+        public PlayerBaseState State;
+        public PlayerStateFactory Factory;
+
         private void Start()
         {
+            Factory = new PlayerStateFactory(this);
+            State = Factory.Idle();
+            
+            print(State.GetType());
+            
             PlayerInput = new PlayerInput();
-            PlayerMovement = new PlayerMovement(this);
             
             _rigidbody = GetComponent<Rigidbody2D>();
         }
@@ -27,13 +34,14 @@ namespace Entities.Player
         private void Update()
         {
             PlayerInput.Update();
+            State.Update();
             
             DEBUG_PLAYER_EVENTS();
         }
 
         private void FixedUpdate()
         {
-            PlayerMovement.FixedUpdate();
+            State.FixedUpdate();
         }
 
         public void SetVelocity(Vector2 velocity)

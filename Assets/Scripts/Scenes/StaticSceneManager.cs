@@ -1,25 +1,24 @@
 using System;
-using System.ComponentModel;
 using Entities.Player;
-using Enums;
 using Exceptions;
-using Generics;
+using Extendables.Generics;
+using Scenes.Enums;
 using UnityEngine.SceneManagement;
 
 namespace Scenes
 {
-    public class StaticSceneManager : SingletonMonoBehaviour<StaticSceneManager>
+    public sealed class StaticSceneManager : SingletonMonoBehaviour<StaticSceneManager>
     {
         private void OnEnable()
         {
-            PlayerController.Dead += EndScene;
-            PlayerController.Win += WinScene;
+            PlayerContext.Dead += EndScene;
+            PlayerContext.Win += WinScene;
         }
 
         private void OnDisable()
         {
-            PlayerController.Dead -= EndScene;
-            PlayerController.Win -= WinScene;
+            PlayerContext.Dead -= EndScene;
+            PlayerContext.Win -= WinScene;
         }
 
         public void OpenScene(SceneNameEnum sceneName)
